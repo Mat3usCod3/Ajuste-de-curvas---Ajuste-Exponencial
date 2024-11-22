@@ -4,28 +4,28 @@ Este notebook contém uma implementação para ajuste exponencial de dados, util
 
 ## Métodos e Funções
 
-### 1. `grafico(dados: array-like) -> None`
+### 1. `grafico()`
 
 **Objetivo**: Este método é utilizado para gerar um gráfico que exibe os dados de entrada. O gráfico ajuda a visualizar o comportamento dos dados e a verificar se eles seguem uma tendência exponencial.
 
 #### Parâmetros:
-- `dados` (array-like): Um conjunto de dados, com as variáveis independentes \( x \) e dependentes \( y \).
+- `dados` (array-like): Um conjunto de dados, com as variáveis independentes $x$ e dependentes $y$.
 
 #### Como utilizar:
 ```python
 grafico(dados)
 ```
 
-### 2. `ajustar(dados: array-like) -> dict`
+### 2. `ajustar()`
 
-**Objetivo**: Este método ajusta uma curva exponencial aos dados fornecidos, utilizando um algoritmo de otimização. Ele retorna os coeficientes da função ajustada, bem como o coeficiente de determinação (\( R^2 \)), que indica a qualidade do ajuste.
+**Objetivo**: Este método ajusta uma curva exponencial aos dados fornecidos, utilizando um algoritmo de otimização. Ele retorna os coeficientes da função ajustada, bem como o coeficiente de determinação $R^2$, que indica a qualidade do ajuste.
 
 #### Parâmetros:
-- `dados` (array-like): Um conjunto de dados \( x, y \) que será ajustado à curva exponencial.
+- `dados` (array-like): Um conjunto de dados $x, y$ que será ajustado à curva exponencial.
 
 #### Retorno:
 - Um dicionário contendo:
-  - `coeficientes`: Os coeficientes \( a \) e \( b \) da função exponencial ajustada.
+  - `coeficientes`: Os coeficientes $a$ e $b$ da função exponencial ajustada.
   - `R2`: O valor do coeficiente de determinação, que indica a precisão do ajuste.
 
 #### Como utilizar:
@@ -34,16 +34,16 @@ resultados = ajustar(dados)
 print(resultados)
 ```
 
-### 3. `interpolar(x: Union[float, array-like], coeficientes: tuple) -> Union[float, array-like]`
+### 3. `interpolar()`
 
-**Objetivo**: Este método calcula o valor de \( y \) para um ou mais valores de \( x \), utilizando os coeficientes da curva exponencial ajustada.
+**Objetivo**: Este método calcula o valor de $y$ para um ou mais valores de $x$, utilizando os coeficientes da curva exponencial ajustada.
 
 #### Parâmetros:
-- `x` (float ou array-like): O valor de \( x \) ou uma lista de valores \( x \) para os quais você deseja estimar os valores de \( y \).
-- `coeficientes` (tuple): Os coeficientes \( a \) e \( b \) da curva exponencial ajustada.
+- `x` (float ou array-like): O valor de $x$ ou uma lista de valores $x$ para os quais você deseja estimar os valores de $y$.
+- `coeficientes` (tuple): Os coeficientes $a$ e $b$ da curva exponencial ajustada.
 
 #### Retorno:
-- O valor de \( y \) estimado, ou uma lista de valores estimados de \( y \) para múltiplos valores de \( x \).
+- O valor de $y$ estimado, ou uma lista de valores estimados de $y$ para múltiplos valores de $x$.
 
 #### Como utilizar:
 ```python
