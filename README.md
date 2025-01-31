@@ -79,5 +79,3 @@ print(y_estimado)
 
 Este notebook permite ajustar dados a uma curva exponencial e realizar previsões com base no modelo ajustado. A função `grafico()` é útil para validar visualmente a relação dos dados, enquanto os métodos `ajustar()` e `interpolar()` permitem calcular o melhor ajuste e realizar previsões, respectivamente.
 
-Se desejar mais detalhes ou alterações na documentação, estou à disposição para ajustar! 😊
-
